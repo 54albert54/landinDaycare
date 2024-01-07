@@ -1,16 +1,13 @@
 import { useState } from "react";
 
 const navbarLinks = [
+  
   {
-    name: "Home",
-    path: "#home",
-  },
-  {
-    name: "declaración",
+    name: "declaraciones",
     path: "#declaración",
   },
   {
-    name: "Matricula",
+    name: "Matriculas",
     path: "#matricula",
   },
   {
@@ -22,7 +19,7 @@ const navbarLinks = [
     path: "#galería",
   },
   {
-    name: "Contacto",
+    name: "Contactos",
     path: "#footer",
   },
 ];
@@ -34,7 +31,9 @@ const NavbarReact = () => {
     <header className=" bg-mainColor">
       <nav aria-label="Global" className="hidden sm:block ">
         <div className="mx-auto flex justify-between h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-          <img className="size-20" src='../../public/logo.png' alt="logo.png" />
+          <a href="#home">
+          <img className="size-20" src='../../logo.png' alt="logo.png" />
+          </a>
           <nav>
             <ul className="flex items-center gap-6 text-sm">
               {navbarLinks.map((link) => (
@@ -48,7 +47,9 @@ const NavbarReact = () => {
       </nav>
       {/* menu mobile */}
       <nav className="fixed bg-mainColor w-screen z-30 top-0 sm:hidden flex justify-between px-6 h-12 items-center shadow-2xl">
-        <p>logo</p>
+      <a href="#home">
+      <img className="size-10" src='../../logo.png' alt="logo.png" />
+      </a>
         {showMenu && (
           <section className="absolute left-0 top-12 h-screen bg-mainWhite w-full z-20">
             <ul className="ml-6 pt-11">
