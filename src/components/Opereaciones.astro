@@ -1,0 +1,66 @@
+---
+import LayoutContainer from "./LayoutContainer.astro";
+export interface Props {
+  className: string;
+  id: string;
+}
+
+const { className, id } = Astro.props;
+//  bg-white/75 sm:bg-transparent sm:from-red/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l
+---
+
+<LayoutContainer id={id} className={className}>
+  <section>
+    <div class="max-w-xl mb-10">
+      <h2 class="text-3xl font-bold sm:text-4xl">Operaciones</h2>
+    </div>
+    <section
+      class="relative sm:flex sm:gap-32 overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8"
+    >
+      <span
+        class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-40% from-mainColor  via-importantText to-90% to-mainWhite"
+      ></span>
+    <div>
+      <div class="sm:flex sm:justify-between sm:gap-4">
+        <div>
+          <p class="text-lg font-bold text-gray-900 sm:text-xl">
+            Nuesto programa esta operando de 7:00am a 5:30pm de lunes a viernes.
+          </p>
+
+          <p class="mt-1 text-sm font-medium text-gray-600">
+            Ofreciendo opciones de tiempo completo y medio tiempo atendieno la
+            necesidades de los padres.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <p class="max-w-[40ch] text-sm text-gray-500">
+          Cuenta con un personal altamente capacitado y experimentado en el
+          cuidado infantil, cumpliendo con los estandares del EEC en el estado
+          massachutses.
+        </p>
+      </div>
+    </div>
+
+      <dl class="mt-6  flex sm:flex-col gap-10 sm:gap-4">
+        <div class="flex flex-col">
+          <dt class="text-md font-medium text-gray-600">
+            Dra. Maria Contreras.
+          </dt>
+          <dd class="text-xs text-gray-500">Teacher.</dd>
+          <dd class="text-xs text-gray-500">Infant/Tpddler.</dd>
+          <dd class="text-xs text-gray-500">Preschool.</dd>
+        </div>
+
+        <div class="flex flex-col">
+          <dt class="text-sm font-medium text-gray-600">
+            Asistentes calificafos
+          </dt>
+          <dd class="text-xs text-gray-500">Jenrry Alviarez.</dd>
+          <dd class="text-xs text-gray-500">Lisset Rosario.</dd>
+        </div>
+      </dl>
+    </section>
+  </section>
+</LayoutContainer>

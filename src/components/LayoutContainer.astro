@@ -1,0 +1,11 @@
+---
+export interface Props {
+  className:string
+  id:string
+}
+
+const { className ,id } = Astro.props
+---
+<section id={id} class={`max-w-screen-xl mx-auto  ${className} pt-12  `}>
+ <slot/>
+</section>

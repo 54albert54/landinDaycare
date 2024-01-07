@@ -1,0 +1,36 @@
+---
+import LayoutContainer from "./LayoutContainer.astro";
+export interface Props {
+  className: string;
+  id: string;
+}
+
+const { className, id } = Astro.props;
+const allImg = [
+  '../../public/img2.jpg',
+  '../../public/img4.jpg',
+  '../../public/img8.jpg',
+  '../../public/img9.jpg',
+  '../../public/img7.jpg',
+  '../../public/img6.jpg',
+]
+
+---
+
+<LayoutContainer id={id} className={className}>
+  <div class="max-w-xl mb-10">
+    <h2 class="text-3xl font-bold sm:text-4xl">Galeria</h2>
+  </div>
+
+  <div class="grid auto-rows-[480px] sm:grid-cols-3 gap-4">
+    {allImg.map((img, i) => (
+      <div
+      
+        class={`row-span-1 col-span-1  rounded-xl border-2 overflow-hidden  
+          `}
+      >
+      <img class="w-full h-auto object-fill " src={img} alt=""/>
+      </div>
+    ))}
+  </div>
+</LayoutContainer>

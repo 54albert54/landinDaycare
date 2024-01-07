@@ -1,0 +1,54 @@
+---
+import { array } from "astro/zod";
+import LayoutContainer from "./LayoutContainer.astro";
+export interface Props {
+  className:string
+  id:string
+}
+
+const {className , id} = Astro.props
+
+const matriculas =[
+  {
+    name:'Infantes',
+    dectails:'De 0 a 24 meses.'
+  },
+  {
+    name:'Pre-Kinder',
+    dectails:'De 2 a 6 años.'
+  },
+  {
+    name:'Edad Escolar',
+    dectails:'De 6 años en adelante.'
+  },
+]
+
+---
+
+<LayoutContainer id={id} className={className} >
+  <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div class="max-w-xl mb-10">
+      <h2 class="text-3xl font-bold sm:text-4xl">Matricula</h2>
+    </div>
+    <div class="grid grid-cols-1 gap-4  sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8 sm:pr-16">
+    
+      
+      {
+        matriculas.map(elemte =>(
+        <div class="divide-y divide-gray-200 bg-mainWhite rounded-2xl border border-gray-200 shadow-sm">
+        <div class="p-6 sm:px-8">
+          <h2 class="text-lg font-medium text-gray-900">{elemte.name}</h2>
+          <p class="mt-2 text-gray-700">{elemte.dectails}</p>
+        </div>
+      </div>
+        ))
+      }
+    
+  
+    </div>
+  </div>
+  <figure class=" w-full pl-12 sm:pl-0  h-auto flex justify-center items-center pr-16">
+    <img class="w-auto h-auto" src="https://54albert54.github.io/daycare/acces/silueta.png" alt="">
+   </figure>
+</LayoutContainer>
+ 
