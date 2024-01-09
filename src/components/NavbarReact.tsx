@@ -3,7 +3,7 @@ import { useState } from "react";
 const navbarLinks = [
   
   {
-    name: "declaraciones",
+    name: "Declaraciones",
     path: "#declaración",
   },
   {
