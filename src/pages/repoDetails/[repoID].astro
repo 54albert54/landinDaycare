@@ -17,16 +17,26 @@ const showData:TRepositorio  = allRepo.find((info) => info.id == repoID);
 
 
 ---
-<a href="/">Back</a>
-<article class="overflow-hidden w-[800px] mx-auto rounded-lg shadow transition hover:shadow-lg">
+<section class="bg-slate-400 w-screen">
+  <a href="/">
+    <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M9 14l-4 -4l4 -4" />
+      <path d="M5 10h11a4 4 0 1 1 0 8h-1" />
+    </svg> <p>Back</p></div></a>
+<section class="bg-slate-800 w-[800px] mx-auto rounded-lg ">
+<article 
+class="overflow-hidden w-[800px] bg-white mx-auto rounded-lg shadow transition shadow-lg border-2 -translate-x-2 -translate-y-2 border-black"
  
+>
+<h3 class=" text-lg text-gray-900 font-semibold text-center mt-6">{showData.title}</h3>
   <CarruselImg allImg={showData.img}/>
   <div class=" relative bg-white left-6 p-4 sm:p-6 flex flex-col gap-6">
     
 
     <div >
-      <p  class="block text-xs text-gray-500"> {showData.title}</p>
-      <h3 class="mt-0.5 text-lg text-gray-900">{showData.title}</h3>
+      <p  class="block text-ms text-gray-500"> {showData.title}</p>
+     
     </div>
 
     <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
@@ -47,11 +57,11 @@ const showData:TRepositorio  = allRepo.find((info) => info.id == repoID);
     </div>
     <div class=" flex flex-col gap-2">
       {
-        showData?.características?.map(tools =>(
+        showData?.características?.map((tools ,index) =>(
         <span
         class="whitespace-nowrap rounded-full bg-steal-100 px-2.5 py-0.5 text-xs text-grey-600"
       >
-        *{tools}
+        {index+1}-{tools}.
       </span>
         ))
       }
@@ -79,3 +89,5 @@ const showData:TRepositorio  = allRepo.find((info) => info.id == repoID);
   </div>
  
 </article>
+</section>
+</section>
