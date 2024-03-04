@@ -7,16 +7,21 @@ export interface Props {
 
 const { Repo } = Astro.props;
 ---
-<a href="#" class="group relative w-[430px] m-6  block h-64 sm:h-80 lg:h-96">
+<a href="#" class="group relative w-[430px] m-6 bg-slate-800 block h-64 sm:h-80 lg:h-96">
     <span class="absolute inset-0 border-2 border-dashed border-black"></span>
   
     <div
-      class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+      class="relative flex h-full transform items-end bg-blue-200 border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
     >
+   
       <div
-        class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8"
+        class="p-4 relative !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8"
       >
-        <img src={Repo.img[0]} alt={Repo.title}>
+      <div class="overflow-hidden sm:w-[360px] sm:h-[240px] w-[320px] h-[180px] absolute bottom-12 sm:bottom-32">
+
+        <img class="h-full w-full" src={Repo.img[0]} alt={Repo.title}>
+    </div>
+  
   
         <h2 class="mt-4 text-xl font-medium sm:text-2xl">{Repo.title}</h2>
       </div>
@@ -30,7 +35,7 @@ const { Repo } = Astro.props;
             {Repo.about}
         </p>
   
-        <p class="mt-8 font-bold">Read more</p>
+        <p class="mt-8 font-bold ">Read more</p>
       </div>
     </div>
   </a>

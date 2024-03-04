@@ -11,13 +11,14 @@ export interface Props {
 const { className, id } = Astro.props;
 ---
 <LayoutContainer id={id} className={className}>
-    <div>
-        <RepoCard Repo={allRepo[0]}/>
-        <!-- {
+    <h2 class=" text-center text-2xl font-semibold ">All Repo</h2>
+    <div class="flex flex-wrap w-[430px] sm:w-[990px] sm:h-[840px] mx-auto h-[620px] overflow-y-auto ">
+        <!-- <RepoCard Repo={allRepo[0]}/> -->
+        {
            allRepo.map(element =>(
             <RepoCard Repo={element}/>
             )) 
-        } -->
+        }
     </div>
 
 </LayoutContainer>

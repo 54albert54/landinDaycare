@@ -46,8 +46,8 @@ export type  TRepositorio = {
   allRepo.push({
     title: "Print Web/Desktop",
     img: [
+        "https://pbs.twimg.com/media/GHoFhlxXgAATdxY?format=jpg&name=large",
       "https://pbs.twimg.com/media/GHoFhlxXMAAmYWN?format=jpg&name=large",
-      "https://pbs.twimg.com/media/GHoFhlxXgAATdxY?format=jpg&name=large",
       "https://pbs.twimg.com/media/GHoFhlvWEAA-B_4?format=jpg&name=large",
       "https://pbs.twimg.com/media/GHoFYjBWEAA1zIz?format=jpg&name=large",
       "https://pbs.twimg.com/media/GHoFYjDWcAAdebr?format=jpg&name=large",
