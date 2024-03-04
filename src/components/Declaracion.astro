@@ -6,14 +6,29 @@ export interface Props {
 }
 
 const {className , id} = Astro.props
-//  bg-white/75 sm:bg-transparent sm:from-red/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l
+const data = [
+  {
+    title: "offer job opportunity?",
+    dectails: "I am open to discussing potential job opportunities or collaborations. With experience in web development and software engineering, I am interested in roles that allow me to work on exciting and challenging projects. If you have a project or role in mind, feel free to reach out and let's discuss!",
+  },
+  {
+    title: "Connect?",
+    dectails: "Networking is key in the tech industry, and I'm always looking to meet new people and expand my professional circle. Whether you're a fellow developer, designer, or entrepreneur, I'd love to chat and learn more about your work. Let's grab a virtual coffee and see where the conversation takes us!",
+  },
+  {
+    title: "Build something?",
+    dectails: "I have a passion for developing innovative web applications that solve complex problems. Whether it's building a custom e-commerce platform or a cutting-edge web app, I'm always ready for a new challenge. Let's create something amazing together!",
+  },
+]
+
+
 ---
 
 <LayoutContainer id={id} className={className} >
   <section class=" text">
     <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="max-w-xl">
-        <h2 class="text-3xl font-bold sm:text-4xl">Declaracion de Mision</h2>
+        <h2 class="text-3xl font-bold sm:text-4xl">Want To</h2>
   
         <p class="mt-4 text-normaltext">
           Ven y descubre un lugar donde la curiosidad y la creatividad de tus hijos florecerán, preparándolos para un futuro brillante. ¡Únete a nuestra comunidad educativa y sé testigo del increíble viaje de desarrollo de tus hijos!"  
@@ -21,105 +36,24 @@ const {className , id} = Astro.props
       </div>
   
       <div class="mt-8 grid grid-cols-1 gap-8 md:mt-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
-        <div class="flex items-start gap-4">
+        
+        {
+          data.map(info =>(
+          <div class="flex items-start gap-4">
           <span class="shrink-0 rounded-lg bg-gray-800/60 p-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" /><path d="M9 4v13" /><path d="M15 7v5.5" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" /><path d="M19 18v.01" /></svg>
           </span>
   
           <div>
-            <h2 class="text-lg font-bold">Ubicacion.</h2>
+            <h2 class="text-lg font-bold"> {info.title}</h2>
   
             <p class="mt-1 text-sm text-normaltext">
-              Nuestro programa está ubicado en un área céntrica y accesible para los padres y cuenta con todo lo necesario para garantizar la educación y comodidad de los niños.
-            </p>
+              {info.dectails} </p>
           </div>
         </div>
-  
-        <div class="flex items-start gap-4">
-          <span class="shrink-0 rounded-lg bg-gray-800/60 p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-          </span>
-  
-          <div>
-            <h2 class="text-lg font-bold">Instalacion.</h2>
-  
-            <p class="mt-1 text-sm text-normaltext">
-              En nuestro centro educativo, nos enorgullece ofrecer un espacio excepcionalmente diseñado para nutrir el crecimiento y desarrollo integral de tus hijos. 
-            </p>
-          </div>
-        </div>
-  
-        <div class="flex items-start gap-4">
-          <span class="shrink-0 rounded-lg bg-gray-800/60 p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
-          </span>
-  
-          <div>
-            <h2 class="text-lg font-bold">Experiencia.</h2>
-  
-            <p class="mt-1 text-sm text-normaltext">
-              Un equipo de profesionales apasionados y altamente calificados que se dedican a promover el desarrollo socioemocional, cognitivo, del lenguaje y físico de tus hijos. 
-            </p>
-          </div>
-        </div>
-  
-        <div class="flex items-start gap-4">
-          <span class="shrink-0 rounded-lg bg-gray-800/60 p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google-photos" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7.5 7c2.485 0 4.5 1.974 4.5 4.409v.591h-8.397a.61 .61 0 0 1 -.426 -.173a.585 .585 0 0 1 -.177 -.418c0 -2.435 2.015 -4.409 4.5 -4.409z" /><path d="M16.5 17c-2.485 0 -4.5 -1.974 -4.5 -4.409v-.591h8.397c.333 0 .603 .265 .603 .591c0 2.435 -2.015 4.409 -4.5 4.409z" /><path d="M7 16.5c0 -2.485 1.972 -4.5 4.405 -4.5h.595v8.392a.61 .61 0 0 1 -.173 .431a.584 .584 0 0 1 -.422 .177c-2.433 0 -4.405 -2.015 -4.405 -4.5z" /><path d="M17 7.5c0 2.485 -1.972 4.5 -4.405 4.5h-.595v-8.397a.61 .61 0 0 1 .175 -.428a.584 .584 0 0 1 .42 -.175c2.433 0 4.405 2.015 4.405 4.5z" /></svg>
-          </span>
-  
-          <div>
-            <h2 class="text-lg font-bold">Juegos al aire.</h2>
-  
-            <p class="mt-1 text-sm text-normaltext">
-              Hemos creado un espacio seguro y estimulante, donde los niños pueden explorar, aprender y desarrollarse físicamente mientras disfrutan de un pleno recreamiento.
-            </p>
-          </div>
-        </div>
-  
-        <div class="flex items-start gap-4">
-          <span class="shrink-0 rounded-lg bg-gray-800/60 p-4">
-            <svg
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-              ></path>
-            </svg>
-          </span>
-  
-          <div>
-            <h2 class="text-lg font-bold">Compromiso</h2>
-  
-            <p class="mt-1 text-sm text-normaltext">
-              Somos adaptables y flexibles para satisfacer las necesidades cambiantes de los niños y sus familias. Esto puede incluir horarios flexibles, programas personalizados y ajustes para abordar las necesidades individuales de los niños.</p>
-          </div>
-        </div>
-  
-        <div class="flex items-start gap-4">
-          <span class="shrink-0 rounded-lg bg-gray-800/60 p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" /><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12l0 2.5" /></svg>
-          </span>
-  
-          <div>
-            <h2 class="text-lg font-bold">Seguridad</h2>
-  
-            <p class="mt-1 text-sm text-normaltext">
-              Hemo implementado un sistema de vigilancia para garantizar la tranquilidad de los padres y la protección constante de los niños. 
-            </p>
-          </div>
-        </div>
+          ))
+        }
+    
       </div>
     </div>
   </section>

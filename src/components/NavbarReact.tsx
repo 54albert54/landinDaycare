@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navbarLinks = [
   
@@ -24,11 +24,28 @@ const navbarLinks = [
   },
 ];
 
+
 const NavbarReact = () => {
+  const [stickyClass, setStickyClass] = useState('relative');
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', stickNavbar);
+  
+    return () => {
+      window.removeEventListener('scroll', stickNavbar);
+    };
+  }, []);
+  
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 50 ? setStickyClass('fixed top-0 left-0 z-50 bg-gray-200/50 ') : setStickyClass('fixed text-white  bg-mainColor');
+    }
+  };
   return (
     // menu desktop
-    <header className=" bg-mainColor">
+    <header className={`  sm:w-full z-50 ease-in font-semibold ${stickyClass}`} >
       <nav aria-label="Global" className="hidden sm:block ">
         <div className="mx-auto flex justify-between h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
           <a href="#home">
