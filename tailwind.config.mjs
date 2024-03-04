@@ -4,11 +4,12 @@ export default {
 	theme: {
 		extend: {
 			colors:{
-				mainWhite:'#f7f7f7',
-				mainColor:'#9293fd',
-				callToAction:'#1c1819',
+				mainWhite:'#c4c6cc',
+				mainColor:'#2b2d33',
+				callToAction:'#806b7e',
 				importantText:'#dc2777',
-				normaltext:'#202028'
+				normaltext:'#202028',
+				textColor:'#c4c6cc'
 
 			}
 		},

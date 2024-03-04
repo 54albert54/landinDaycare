@@ -7,11 +7,11 @@ export interface Props {
 
 const { Repo } = Astro.props;
 ---
-<a href={`/repoDetails/${Repo.id}`} class="group relative w-[430px] m-6 bg-slate-800 block h-64 sm:h-80 lg:h-96">
-    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+<a href={`/repoDetails/${Repo.id}`} class="group relative w-[430px] m-6 bg-slate-800 rounded-lg block h-64 sm:h-80 lg:h-96">
+    
   
     <div
-      class="relative flex h-full transform items-end bg-blue-200 border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+      class="relative flex h-full transform items-end bg-blue-200 border-2 rounded-lg border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
     >
    
       <div
