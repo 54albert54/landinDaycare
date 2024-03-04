@@ -1,4 +1,5 @@
 export type  TRepositorio = {
+    id:number
     title: string;
     img: string[];
     code: TCode[];
@@ -44,6 +45,7 @@ export type  TRepositorio = {
   
   */
   allRepo.push({
+    id:1,
     title: "Print Web/Desktop",
     img: [
         "https://pbs.twimg.com/media/GHoFhlxXgAATdxY?format=jpg&name=large",
@@ -69,6 +71,7 @@ export type  TRepositorio = {
   });
   
   allRepo.push({
+    id:2,
     title: "PostAPP",
     img: [
       "https://pbs.twimg.com/media/GGLytj-XcAA7eCB?format=jpg&name=large",
@@ -91,6 +94,7 @@ export type  TRepositorio = {
   });
   
   allRepo.push({
+    id:3,
     title: "Pokedex App",
     img: [
       "https://pbs.twimg.com/media/F6vv_FRWsAAlrv_?format=png&name=900x900",
@@ -105,6 +109,7 @@ export type  TRepositorio = {
   });
   
   allRepo.push({
+    id:4,
     title: "MemoryQuiz",
     img: [
       "https://camo.githubusercontent.com/fff63fd39c5f09386fe639e27f4391f968ad75d272ca08c4db028a4cb66e0f54/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f47444850663152576b4141456952323f666f726d61743d6a7067266e616d653d6c61726765",
@@ -123,6 +128,7 @@ export type  TRepositorio = {
   });
   
   allRepo.push({
+    id:5,
     title: "Friday Night Rhythm-CLONE",
     img: [
       "https://camo.githubusercontent.com/954baf292f4b98a02fd00c1c9b6d85197823ead8128d66e146183590d2fe18aa/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f47444872357474574941414f7942443f666f726d61743d6a7067266e616d653d6c61726765",
@@ -141,6 +147,7 @@ export type  TRepositorio = {
   });
   
   allRepo.push({
+    id:6,
     title: "Angel's Family Daycare",
     img: [
       "https://camo.githubusercontent.com/25f42a115e0f259220a4583e1e858037e96b272dd03dbb24ae95d352f3ec6f63/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4744526e70516457554141344476353f666f726d61743d6a7067266e616d653d6d656469756d",
@@ -156,6 +163,7 @@ export type  TRepositorio = {
   });
   
   allRepo.push({
+    id:7,
     title: "TodoList App",
     img: [
       "https://camo.githubusercontent.com/91cbd9ea4671874bc2ae328171639c1307ef9ed94d445d0f20a4c6b78cd46d45/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4744475a77726b58634141467642673f666f726d61743d6a7067266e616d653d6c61726765",
@@ -172,6 +180,7 @@ export type  TRepositorio = {
     pageLink: "https://todo-list-2-phi.vercel.app",
   });
   allRepo.push({
+    id:8,
     title: "CINEMA ASTRO",
     img: [
       "https://camo.githubusercontent.com/4258394b525857c40e83024e82db486cd48fbc1e2f5b96dccf5dccc34e378079/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4743347a57457257674141733068593f666f726d61743d6a7067266e616d653d6d656469756d",
@@ -193,6 +202,7 @@ export type  TRepositorio = {
   //  collaborative repo
   
   collaborative.push({
+    id:9,
     role: "Colabore como Front-end para la landing Page y el area de animales por ecosistemas.",
     title: "Preservación Animal",
     img: [

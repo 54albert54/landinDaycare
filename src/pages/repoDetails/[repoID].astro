@@ -1,0 +1,81 @@
+---
+import CarruselImg from '../../components/CarruselImg.astro'
+import type {  TRepositorio } from '../../provider/repositoryData'
+import  { allRepo } from '../../provider/repositoryData'
+
+
+export function getStaticPaths() {
+  // return ([{params:{dataid:848326}}])
+
+  return allRepo?.map((rep) => ({
+    params: { repoID: rep.id },
+  }));
+}
+const { repoID } = Astro.params;
+
+const showData:TRepositorio  = allRepo.find((info) => info.id == repoID);
+
+
+---
+<a href="/">Back</a>
+<article class="overflow-hidden w-[800px] mx-auto rounded-lg shadow transition hover:shadow-lg">
+ 
+  <CarruselImg allImg={showData.img}/>
+  <div class=" relative bg-white left-6 p-4 sm:p-6 flex flex-col gap-6">
+    
+
+    <div >
+      <p  class="block text-xs text-gray-500"> {showData.title}</p>
+      <h3 class="mt-0.5 text-lg text-gray-900">{showData.title}</h3>
+    </div>
+
+    <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+      {showData.about}
+    </p>
+    <div class=" flex flex-row gap-2">
+      {
+        showData.code.map(tools =>(
+        <span
+        class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
+      >
+        {tools}
+      </span>
+        ))
+      }
+
+
+    </div>
+    <div class=" flex flex-col gap-2">
+      {
+        showData?.características?.map(tools =>(
+        <span
+        class="whitespace-nowrap rounded-full bg-steal-100 px-2.5 py-0.5 text-xs text-grey-600"
+      >
+        *{tools}
+      </span>
+        ))
+      }
+
+
+    </div>
+    <div class=" flex flex-col gap-2">
+      
+        <span
+        class="whitespace-nowrap rounded-full bg-steal-100 px-2.5 py-0.5 text-xs text-grey-600"
+      >
+      <a href={showData.pageLink}>Pagina web --</a>
+       
+      </span>
+      <span
+      class="whitespace-nowrap rounded-full bg-steal-100 px-2.5 py-0.5 text-xs text-grey-600"
+    >
+    <a href={showData.repoLink}>GitHub --</a>
+     
+    </span>
+     
+
+    </div>
+   
+  </div>
+ 
+</article>
