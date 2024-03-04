@@ -1,0 +1,36 @@
+---
+import type {  TRepositorio } from '../provider/repositoryData'
+export interface Props {
+  Repo:TRepositorio ;
+  
+}
+
+const { Repo } = Astro.props;
+---
+<a href="#" class="group relative w-[430px] m-6  block h-64 sm:h-80 lg:h-96">
+    <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+  
+    <div
+      class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+    >
+      <div
+        class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8"
+      >
+        <img src={Repo.img[0]} alt={Repo.title}>
+  
+        <h2 class="mt-4 text-xl font-medium sm:text-2xl">{Repo.title}</h2>
+      </div>
+  
+      <div
+        class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8"
+      >
+        <h3 class="mt-4 text-xl font-medium sm:text-2xl">{Repo.title}</h3>
+  
+        <p class="mt-4 text-sm sm:text-base">
+            {Repo.about}
+        </p>
+  
+        <p class="mt-8 font-bold">Read more</p>
+      </div>
+    </div>
+  </a>

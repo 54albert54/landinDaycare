@@ -1,0 +1,23 @@
+---
+import { allRepo  } from '../provider/repositoryData'
+import RepoCard from './RepoCard.astro'
+
+import LayoutContainer from './LayoutContainer.astro'
+export interface Props {
+  className: string;
+  id: string;
+}
+
+const { className, id } = Astro.props;
+---
+<LayoutContainer id={id} className={className}>
+    <div>
+        <RepoCard Repo={allRepo[0]}/>
+        <!-- {
+           allRepo.map(element =>(
+            <RepoCard Repo={element}/>
+            )) 
+        } -->
+    </div>
+
+</LayoutContainer>
