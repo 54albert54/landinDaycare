@@ -24,6 +24,12 @@ const { Repo } = Astro.props;
   
   
         <h2 class="mt-4 text-xl font-medium sm:text-2xl">{Repo.title}</h2>
+        <div class="flex flex-row gap-6">
+          {
+            Repo.dectail.map(info => (
+              <p class="bg-slate-200 rounded-xl text-sm text-slate-800 py-1 px-2 shadow-md">{info}</p>
+            ))
+          }</div>
       </div>
   
       <div
@@ -34,8 +40,11 @@ const { Repo } = Astro.props;
         <p class="mt-4 text-sm sm:text-base">
             {Repo.about}
         </p>
-  
-        <p class="mt-8 font-bold ">Read more</p>
+        <div>
+
+          <p class="mt-8 font-bold ">Read more</p>
+         
+        </div>
       </div>
     </div>
   </a>

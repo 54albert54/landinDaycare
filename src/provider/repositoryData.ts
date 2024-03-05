@@ -1,5 +1,6 @@
 export type  TRepositorio = {
     id:number
+    dectail:TDectail[]
     title: string;
     img: string[];
     code: TCode[];
@@ -12,6 +13,14 @@ export type  TRepositorio = {
   interface TRepositorioAport extends TRepositorio {
     role: string;
   }
+  type TDectail = 
+  | "Web Page."
+  | "Web App."
+  | "App Movil."
+  | "Api Rest."
+  | "Video Game."
+  | "Desktop App."
+  | "Ecomes."
   
   type TCode =
     | "HTML"
@@ -46,6 +55,7 @@ export type  TRepositorio = {
   */
   allRepo.push({
     id:1,
+    dectail:["Web App.","Desktop App."] ,
     title: "Print Web/Desktop",
     img: [
         "https://pbs.twimg.com/media/GHoFhlxXgAATdxY?format=jpg&name=large",
@@ -72,6 +82,7 @@ export type  TRepositorio = {
   
   allRepo.push({
     id:2,
+    dectail:["App Movil."] ,
     title: "PostAPP",
     img: [
       "https://pbs.twimg.com/media/GGLytj-XcAA7eCB?format=jpg&name=large",
@@ -96,6 +107,7 @@ export type  TRepositorio = {
   allRepo.push({
     id:3,
     title: "Pokedex App",
+    dectail:["App Movil."] ,
     img: [
       "https://pbs.twimg.com/media/F6vv_FRWsAAlrv_?format=png&name=900x900",
       "https://pbs.twimg.com/media/F6vv6h5WoAAjDW0?format=png&name=900x900",
@@ -111,6 +123,7 @@ export type  TRepositorio = {
   allRepo.push({
     id:4,
     title: "MemoryQuiz",
+    dectail:["Video Game."] ,
     img: [
       "https://camo.githubusercontent.com/fff63fd39c5f09386fe639e27f4391f968ad75d272ca08c4db028a4cb66e0f54/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f47444850663152576b4141456952323f666f726d61743d6a7067266e616d653d6c61726765",
       "https://camo.githubusercontent.com/f412e8a8ba4e253a548f299566306c0d0a12285aec1a0429cef5ec599d63e06c/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f474448506b31535730414134656f593f666f726d61743d6a7067266e616d653d6c61726765",
@@ -130,6 +143,7 @@ export type  TRepositorio = {
   allRepo.push({
     id:5,
     title: "Friday Night Rhythm-CLONE",
+    dectail:["Video Game."] ,
     img: [
       "https://camo.githubusercontent.com/954baf292f4b98a02fd00c1c9b6d85197823ead8128d66e146183590d2fe18aa/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f47444872357474574941414f7942443f666f726d61743d6a7067266e616d653d6c61726765",
       "https://camo.githubusercontent.com/3db3a045e61e556378323a7f5b9c20e2a8cf90fca27047b4efe206c236ba544a/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f47444872357477585941416b72374d3f666f726d61743d6a7067266e616d653d6c61726765",
@@ -149,6 +163,7 @@ export type  TRepositorio = {
   allRepo.push({
     id:6,
     title: "Angel's Family Daycare",
+    dectail:["Web Page."] ,
     img: [
       "https://camo.githubusercontent.com/25f42a115e0f259220a4583e1e858037e96b272dd03dbb24ae95d352f3ec6f63/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4744526e70516457554141344476353f666f726d61743d6a7067266e616d653d6d656469756d",
       "https://camo.githubusercontent.com/d8bf82fb2b4d7971318421c545ebd6c8918643ef5c8823de0abd21a4d3914708/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4744526e41456c584d4141746b51583f666f726d61743d6a7067266e616d653d6d656469756d",
@@ -165,6 +180,7 @@ export type  TRepositorio = {
   allRepo.push({
     id:7,
     title: "TodoList App",
+    dectail:["Web App."] ,
     img: [
       "https://camo.githubusercontent.com/91cbd9ea4671874bc2ae328171639c1307ef9ed94d445d0f20a4c6b78cd46d45/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4744475a77726b58634141467642673f666f726d61743d6a7067266e616d653d6c61726765",
     ],
@@ -182,6 +198,7 @@ export type  TRepositorio = {
   allRepo.push({
     id:8,
     title: "CINEMA ASTRO",
+    dectail:["Web Page."] ,
     img: [
       "https://camo.githubusercontent.com/4258394b525857c40e83024e82db486cd48fbc1e2f5b96dccf5dccc34e378079/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4743347a57457257674141733068593f666f726d61743d6a7067266e616d653d6d656469756d",
       "https://camo.githubusercontent.com/3ed65bb4cd165cff1390c109668409c2e4be5b34f369e137b3b4b2fed2f0f095/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4743347a57457658594141567551573f666f726d61743d6a7067266e616d653d6d656469756d",
@@ -205,6 +222,7 @@ export type  TRepositorio = {
     id:9,
     role: "Colabore como Front-end para la landing Page y el area de animales por ecosistemas.",
     title: "Preservación Animal",
+    dectail:["Web Page."] ,
     img: [
       "https://pbs.twimg.com/media/GDSRV0pXcAAcM4r?format=jpg&name=4096x4096",
       "https://pbs.twimg.com/media/GDSRV0sXkAACrpY?format=jpg&name=4096x4096",
