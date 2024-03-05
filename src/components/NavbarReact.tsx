@@ -45,7 +45,7 @@ const NavbarReact = () => {
   };
   return (
     // menu desktop
-    <header className={`  sm:w-full z-50 ease-in font-semibold ${stickyClass}`} >
+    <header className={`  sm:w-full z-50 ease-in font-semibold ${stickyClass} `} >
       <nav aria-label="Global" className="hidden sm:block ">
         <div className="mx-auto flex justify-between h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
           <a href="#home">

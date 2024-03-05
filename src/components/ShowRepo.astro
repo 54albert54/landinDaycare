@@ -10,8 +10,11 @@ export interface Props {
 
 const { className, id } = Astro.props;
 ---
-<LayoutContainer id={id} className={className}>
-    <h2 class="text-3xl font-bold sm:text-4xl">Portfolio</h2>
+<LayoutContainer id={id} className={className + 'max-w-[1080px] mx-auto'}>
+    <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 animate-slide-in-bottom animate-delay-900 animate-duration-slow">
+        <div class="max-w-xl mb-10">
+          <h2 class="text-3xl font-bold sm:text-4xl">Repositorios</h2>
+        </div>
     <div class="flex flex-wrap w-[430px] sm:w-[990px] sm:h-[840px] mx-auto h-[620px] overflow-y-auto ">
         <!-- <RepoCard Repo={allRepo[0]}/> -->
         {
@@ -20,5 +23,6 @@ const { className, id } = Astro.props;
             )) 
         }
     </div>
+</div>
 
 </LayoutContainer>

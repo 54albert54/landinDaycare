@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro';
 import WantTo from '../components/WantTo.astro';
 import AboutMe from '../components/AboutMe.astro';
 import Operaciones from '../components/Opereaciones.astro';
-import Galeria from '../components/Galeria.astro';
+
 import Footer from '../components/Footer.astro';
 import ShowRepo from '../components/ShowRepo.astro';
 
@@ -13,14 +13,14 @@ import ShowRepo from '../components/ShowRepo.astro';
 <Layout title="Mi Profolio.">
 <main>
 	
-	<Hero id='' className='h-screen '/>
-	<AboutMe id='matricula' className='h-auto  mt-[340px] sm:mt-0  rounded-3xl'/>	
-	<ShowRepo  id='repos' className='h-[840px] sm:h-auto  bg-mainColor/20 '/>
-	<WantTo id='declaración' className='h-[840px] sm:h-auto  '/>
+	<Hero id='' className='h-screen  animate-fade-in animate-delay-300 !w-full'/>
+	<AboutMe id='matricula' className='h-auto  mt-[340px] sm:mt-0  rounded-3xl bg-mainColor text-mainWhite max-w-[1080px] mx-auto'/>	
+	<ShowRepo  id='repos' className='h-[840px] sm:h-auto  '/>
+	<WantTo id='declaración' className='h-[840px] sm:h-auto  bg-mainColor text-mainWhite max-w-[1080px] mx-auto'/>
 
-	<Operaciones id='operaciones' className='h-[400px] mt-0 mb-10 pt-10 sm:px-0 px-6'/>
+	<Operaciones id='operaciones' className='h-[400px] mt-0 mb-10 pt-10 sm:px-0 px-6 max-w-[1080px] mx-auto'/>
 	<!-- <Galeria id='galería' className='h-auto  pt-10 sm:px-0 px-6'/> -->
-	<!-- <Footer id='footer' className=' mt-12  '/> -->
+	<Footer id='footer' className=' mt-12  '/>
 </main>
 </Layout>
 
