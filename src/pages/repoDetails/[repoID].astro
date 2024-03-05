@@ -78,7 +78,10 @@ class="overflow-hidden relative w-[800px] bg-white mx-auto rounded-lg shadow tra
         <span
         class="whitespace-nowrap rounded-full bg-steal-100 px-2.5 py-0.5 text-xs text-grey-600"
       >
-      <a href={showData.pageLink}>Pagina web --</a>
+      {
+        showData.pageLink != ''? <a href={showData.pageLink}>Pagina web --</a> :<p>-</p>
+      }
+      
        
       </span>
       <span
